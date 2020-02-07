@@ -68,15 +68,26 @@ const oid = Math.floor(Math.random() * 100);
 console.log("The order ID is", oid);
 //parameters
 const parameters = {
-	live: 0,
+	// live: 0,
+	// oid: oid,
+	// ttl: 100000,
+	// tel: "254719158559",
+	// eml: "sala@sala.com",
+	// vid: "demo",
+	// curr: "KES",
+	// cbk: "http://localhost:8080/complete",
+	// crl: 0
+
+	live: 1,
 	oid: oid,
-	ttl: 100000,
-	tel: "254719158559",
-	eml: "sala@sala.com",
-	vid: "demo",
+	ttl: 100,
+	tel: '254722791943', //"254719158559",
+	eml: '',//"sala",
+	vid: "",
 	curr: "KES",
 	cbk: "http://localhost:8080/complete",
 	crl: 0
+
 };
 
 //hashkey generation function
@@ -126,6 +137,6 @@ app.post("https://payments.ipayafrica.com/v3/ke", (req, res) => {
 		crl: req.body.crl
 	});
 });
-app.listen(process.env.PORT || 8080, process.env.IP || "localhost", () => {
-	console.log("Server listening on port 8080....");
+app.listen(process.env.PORT || 8180, process.env.IP || "localhost", () => {
+	console.log("Server listening on port 8180....");
 });
