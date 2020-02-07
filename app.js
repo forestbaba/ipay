@@ -81,7 +81,7 @@ const parameters = {
 	live: 1,
 	oid: oid,
 	ttl: 100,
-	tel: '254722791943', //"254719158559",
+	tel: '', //"254719158559",
 	eml: '',//"sala",
 	vid: "",
 	curr: "KES",
